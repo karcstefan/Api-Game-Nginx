@@ -1,9 +1,4 @@
-FROM ubuntu
-
-RUN echo "deb http://archive.ubuntu.com/ubuntu/ raring main universe" >> /etc/apt/sources.list\
- & apt-get update \
- & apt-get install -y nano wget dialog net-tools nginx  \
-& rm -v /etc/nginx/nginx.conf
+FROM nginx
 
 ADD nginx.conf /etc/nginx/
 
